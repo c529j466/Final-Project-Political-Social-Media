@@ -1,8 +1,8 @@
 const { Schema, model } = require('mongoose');
 const validator = require("validator");
 
-// Schema to create Student model
-const userSchema = new Schema(
+// Schema to create Politician model
+const politicianSchema = new Schema(
     {
      username: {
       type: String,
@@ -58,7 +58,7 @@ const userSchema = new Schema(
       }
     );
     
-    userSchema.pre('save', async function (next) {
+    politicianSchema.pre('save', async function (next) {
         if (this.isNew || this.isModified('password')) {
           const saltRounds = 10;
           this.password = await bcrypt.hash(this.password, saltRounds);
@@ -68,11 +68,11 @@ const userSchema = new Schema(
       });
       
       // custom method to compare and validate password for logging in
-      userSchema.methods.isCorrectPassword = async function (password) {
+      politicianSchema.methods.isCorrectPassword = async function (password) {
         return bcrypt.compare(password, this.password);
       };
     
-    userSchema.virtual('followerCount').get(function() {
+      politicianSchema.virtual('followerCount').get(function() {
       return this.followers.length;
     });
     
