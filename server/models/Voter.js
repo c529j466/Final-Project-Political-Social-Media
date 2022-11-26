@@ -24,9 +24,9 @@ const voterSchema = new Schema(
      following: [
         {
             type: Schema.Types.ObjectId,
-            ref: "following",
         }
-     ]
+     ],
+     followingCount: Number,
     },
     {
         toJSON: {
@@ -51,7 +51,7 @@ const voterSchema = new Schema(
         return bcrypt.compare(password, this.password);
       };
 
-      voterSchema.virtual('followerCount').get(function() {
+      voterSchema.virtual('followingCount').get(function() {
         return this.followers.length;
       });
       
