@@ -19,6 +19,10 @@
     "concurrently": "^5.1.0"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@material-ui/icons": "^4.11.3",
+    "@mui/material": "^5.10.15",
     "bcryptjs": "^2.4.3",
     "dotenv": "^16.0.3",
     "express": "^4.17.1",

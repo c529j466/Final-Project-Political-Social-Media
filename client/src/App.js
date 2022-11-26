@@ -2,6 +2,9 @@ import Home from "./pages/home/Home";
 import Login from "./pages/login/Login";
 import Profile from "./pages/profile/Profile";
 import Register from "./pages/register/Register";
+import Searchbar from "./components/Searchbar/Searchbar";
+import Data from "./Data";
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -14,7 +17,7 @@ import { AuthContext } from "./context/AuthContext";
 function App() {
   const { user } = useContext(AuthContext);
   return (
-    <Router>
+    <><Searchbar placeholder="Search for post and politicians" data={Data}/><Router>
       <Switch>
         <Route exact path="/">
           {user ? <Home /> : <Register />}
@@ -27,7 +30,7 @@ function App() {
           <Profile />
         </Route>
       </Switch>
-    </Router>
+    </Router></>
   );
 }
 
