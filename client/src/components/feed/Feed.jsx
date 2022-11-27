@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import Post from "../post/Post";
 import "./feed.css";
-import axios from "axios";
+import axios from 'axios';
 import { AuthContext } from "../../context/AuthContext";
 
 export default function Feed({ username }) {
@@ -21,11 +21,10 @@ export default function Feed({ username }) {
     };
     fetchPosts();
   }, [username, user._id]);
-
   return (
     <div className="feed">
       <div className="feedWrapper">
-        {(!username || username === user.username) && <Share />}
+        {/* {(!username || username === user.username) && <Share />} */}
         {posts.map((p) => (
           <Post key={p._id} post={p} />
         ))}
