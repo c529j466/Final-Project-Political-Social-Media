@@ -24,7 +24,6 @@ export default function Post({ post }) {
     };
     fetchUser();
   }, [post.userId]);
-
   const likeHandler = () => {
     try {
       axios.put("/posts/" + post._id + "/like", { userId: currentUser._id });

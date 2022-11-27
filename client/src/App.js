@@ -18,7 +18,6 @@ function App() {
     // state = {
     //     data: null
     // };
-
     // componentDidMount() {
     //     this.callBackendAPI()
     //         .then(res => this.setState({ data: res.express }))
