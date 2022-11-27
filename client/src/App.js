@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { Component, useContext } from 'react';
 import logo from './logo.svg';
 import './App.css';
@@ -19,6 +18,7 @@ function App() {
     // state = {
     //     data: null
     // };
+
     // componentDidMount() {
     //     this.callBackendAPI()
     //         .then(res => this.setState({ data: res.express }))
@@ -50,22 +50,6 @@ function App() {
     );
     //}
 }
-=======
-import React from 'react';
-import Home from "./components/pages/home/Home";
-import Navbar from "./components/navbar/Navbar";
-import { useContext } from "react";
-import { AuthContext } from "./context/AuthContext";
 
-function App() {
-  const { user } = useContext(AuthContext);
-      return (
-        <div className="Social-app">
-         <Navbar/>
-          <Home />
-        </div>
-      );
-    };
->>>>>>> c2f4d0e6fef9a405ee3e61ccc651f6f9e2f5bf35
 
 export default App;
