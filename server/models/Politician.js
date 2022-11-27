@@ -37,17 +37,17 @@ const politicianSchema = new Schema(
         required: true,
      },
      posts: [
-        {
-            type: Schema.Types.ObjectId,
-            ref: "Post"
-        }
-     ],
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'post',
+      },
+    ],
      followers: [
         {
             type: Schema.Types.ObjectId,
-            ref: "follower",
         }
-     ]
+     ],
+     followerCount: Number,
     },
     {
         toJSON: {
