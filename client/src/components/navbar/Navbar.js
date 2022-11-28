@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import React from 'react';
 
 
-export default function Navbar() {
+function Navbar() {
   return (
     <div className="topbarContainer">
       <div className="topbarLeft">
@@ -17,6 +17,9 @@ export default function Navbar() {
           <span className="topbarLink">Search</span>
           <span className="topbarLink">Profile</span>
         </div>
+        <div className="topbarLeft">
+          <span className="topbarLink">Login/Signup</span>
+        </div>
         <div className="topbarIcons">
           <div className="topbarIconItem">
           </div>
@@ -25,3 +28,5 @@ export default function Navbar() {
     </div>
   );
 }
+
+export default Navbar;
