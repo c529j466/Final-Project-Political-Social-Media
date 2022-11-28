@@ -1,8 +1,8 @@
 import React, { Component, useContext } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 // import Topbar from './components/navbar/Topbar';
-// import Home from "./pages/home/Home";
+import Home from "./pages/home/Home";
 import Login from "./pages/signin/signin";
 // import Profile from "./pages/profile/Profile";
 import Register from "./pages/signup/signup";
@@ -22,9 +22,11 @@ function App() {
     return (
         <Router>
             <Routes>
-                <Route exact path="/"></Route>
-                <Route path="/login" element={user ? <Navigate to="/" /> : <Login />}></Route>
-                <Route path="/register" element={<Register />}></Route>
+                <Route path="/" element={<Home />}></Route>
+                {/* <Route exact path="/"></Route> */}
+                {/* <Route path="/" element={<Home />} exact /> */}
+                {/* <Route path="/login" element={user ? <Navigate to="/" /> : <Login />}></Route> */}
+                {/* <Route path="/register" element={<Register />}></Route> */}
                 {/* <Route path="/profile/:username" element={<Profile />}></Route> */}
             </Routes>
             {/* <p className="App-intro">{this.state.data}</p> */}
