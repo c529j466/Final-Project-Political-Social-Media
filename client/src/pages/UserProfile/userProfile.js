@@ -10,7 +10,7 @@ import function Userprofile() {
                     <div className="bg-image hover-overlay">
                         <img src="https://mdbcdn.b-cdn.net/img/new/slides/080.webp" className="img-fluid" />
                         <div className="row justify-content-center" id="team-cards">
-                            <!-- Manager eCard -->
+
                             <div className="col-12 ">
                                 <div className="card-header">;
                                     <h2 className="person">username
@@ -22,7 +22,7 @@ import function Userprofile() {
                                     <p className="using">Following: 12 </p>
                                     <p className="using">Likes<span className="material-symbols-outlined">
                                         favorite
-                                    </span>12
+                                    </span>12</p>
                                 </div>
                             </div>
                             <div className=" col-md-12 mb-12">
