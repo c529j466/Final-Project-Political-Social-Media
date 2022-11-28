@@ -1,5 +1,6 @@
 
 import React from "react";
+import './search.css'
 import function searchPage() {
     return (
         <div className="container">
