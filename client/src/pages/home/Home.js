@@ -1,49 +1,25 @@
-import React, { useState } from "react"
+import React from 'react';
+import Card from 'react-bootstrap/Card';
 
-export default function props() {
+function Home() {
 
-    return (
-        <div className="Auth-form-container">
-            <form className="Auth-form">
-                <div className="Auth-form-content">
-                    <h3 className="Auth-form-title">Sign In</h3>
-                    <div className="text-center">
-                        Already registered?{" "}
-                        <span className="link-primary" onClick={useState}>
-                            Sign In
-                        </span>
-                    </div>
-                    <div className="form-group mt-3">
-                        <label>userame</label>
-                        <input
-                            type="username"
-                            className="form-control mt-1"
-                            placeholder="e.g Jane Doe"
-                        />
-                    </div>
-                    <div className="form-group mt-3">
-                        <label>Email address</label>
-                        <input
-                            type="email"
-                            className="form-control mt-1"
-                            placeholder="Email Address"
-                        />
-                    </div>
-                    <div className="form-group mt-3">
-                        <label>Password</label>
-                        <input
-                            type="password"
-                            className="form-control mt-1"
-                            placeholder="Password"
-                        />
-                    </div>
-                    <div className="d-grid gap-2 mt-3">
-                        <button type="submit" className="btn btn-primary">
-                            Submit
-                        </button>
-                    </div>
-                </div>
-            </form>
-        </div>
-    )
-}
+  return (
+    <div>
+      <Card style={{ width: '18rem' }}>
+      <Card.Img variant="top" url="https://cdn11.bigcommerce.com/s-e2nupsxogj/images/stencil/500x659/products/5873/28195/ggffsrrswiys8ev8jmp3__03454.1668759612.jpg?c=1"/>
+      <Card.Body>
+        <Card.Title>Welcome!</Card.Title>
+        <Card.Text>
+          Political connect is an a social media website to become more in tough with your local poitics and politicians.
+        </Card.Text>
+      </Card.Body>
+      <Card.Body>
+        <Card.Link >Signin/Signup</Card.Link>
+      </Card.Body>
+    </Card>
+    </div>
+
+  );
+};
+
+export default Home;
