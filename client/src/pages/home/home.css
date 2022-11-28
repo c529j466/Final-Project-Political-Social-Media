@@ -1,7 +1,19 @@
 .home-card {
-    text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: beige;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightgrey;
+    border: 5px solid black;
+    margin-top: 120px;
+    margin-left: 500px;
+    margin-right: 500px;
 }
+
+.card-body {
+    padding: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: large
+    
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
