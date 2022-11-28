@@ -1,10 +1,10 @@
 import React, { Component, useContext } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
-import Topbar from './components/navbar/Topbar';
+// import Topbar from './components/navbar/Topbar';
 import Home from "./pages/home/Home";
 import Login from "./pages/signin/signin";
-import Profile from "./pages/profile/Profile";
+// import Profile from "./pages/profile/Profile";
 import Register from "./pages/signup/signup";
 import {
     BrowserRouter as Router,
@@ -15,7 +15,23 @@ import {
 import { AuthContext } from "./context/AuthContext";
 
 function App() {
-    // state = {
+
+    const { user } = useContext(AuthContext);
+
+    // render() {
+    return (
+        <Router>
+            <Routes>
+                <Route path="/" element={<Home />}></Route>
+                {/* <Route exact path="/"></Route> */}
+                {/* <Route path="/" element={<Home />} exact /> */}
+                {/* <Route path="/login" element={user ? <Navigate to="/" /> : <Login />}></Route> */}
+                {/* <Route path="/register" element={<Register />}></Route> */}
+                {/* <Route path="/profile/:username" element={<Profile />}></Route> */}
+            </Routes>
+            {/* <p className="App-intro">{this.state.data}</p> */}
+        </Router>
+    );
     //     data: null
     // };
 
@@ -33,21 +49,6 @@ function App() {
     //         throw Error(body.message)
     //     }
     //     return body;
-    // };
-    const { user } = useContext(AuthContext);
-
-    // render() {
-    return (
-        <Router>
-            <Routes>
-                <Route exact path="/"></Route>
-                {/* <Route path="/login" element={user ? <Navigate to="/" /> : <Login />}></Route> */}
-                <Route path="/register" element={<Register />}></Route>
-                {/* <Route path="/profile/:username" element={<Profile />}></Route> */}
-            </Routes>
-            {/* <p className="App-intro">{this.state.data}</p> */}
-        </Router>
-    );
     //}
 }
 
