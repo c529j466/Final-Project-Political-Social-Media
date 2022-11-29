@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import { Link } from "react-router-dom";
+// import CandidateSignup from '../canidate-signup/candidate-signup';
+// import Signin from '../signin/signin';
 
-export const VoterSignup = (props) => {
+
+export default function VoterSignup () {
     const [email, setEmail] = useState('');
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
@@ -33,8 +37,8 @@ export const VoterSignup = (props) => {
         Sign Up
       </Button>
     </Form>
-    <Button onClick={() => props.onFormSwitch ('Signin')}>Already have an Account? Sign in here.</Button>
-    <Button onClick={() => props.onFormSwitch ('CandidateSignup')}>Signup as a Candidate</Button>
+    <Link to = "/Signin" className='button'>Signin</Link>
+    <Link to = "/Candidate-Signup" className='button'>Signup as a Candidate</Link>
     </div>
     )
 }

@@ -1,8 +1,11 @@
 import React, {useState} from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import { Link } from "react-router-dom";
+// import Signin from '../signin/signin';
+// import VoterSignup from '../voter-signup/voter-signup';
 
-export const CandidateSignup = (props) => {
+export default function CandidateSignup() {
     const [email, setEmail] = useState('');
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
@@ -52,10 +55,8 @@ export const CandidateSignup = (props) => {
         Sign Up
       </Button>
     </Form>
-    <Button onClick={() => props.onFormSwitch ('Signin')}>
-        Already have an Account? Sign in here.
-    </Button>
-    <Button onClick={() => props.onFormSwitch ('VoterSignup')} >Signup as a Voter</Button>
+    <Link to = "/Signin" className='button'>Signin</Link>
+    <Link to = "/Voter-Signup" className='button'>Signup as a Voter</Link>
     </div>
     )
 }
