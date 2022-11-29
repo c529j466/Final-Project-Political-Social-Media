@@ -9,6 +9,24 @@ body {
     margin-top: 30px;
 }
 
+.post-box-title {
+    color: white;
+}
+
+#post-box-label {
+    color: white;
+}
+
+.post-content-box {
+    width: 600px;
+    height: 200px;
+   
+}
+#create-post-card {
+    flex-direction: column;
+
+}
+
 @import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
 
 .container {

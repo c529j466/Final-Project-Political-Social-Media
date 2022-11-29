@@ -8,6 +8,7 @@
     top: 0;
     z-index: 999;
 
+
   }
   
   .topbarLeft {
@@ -101,4 +102,22 @@
     border-radius: 50%;
     object-fit: cover;
     cursor: pointer;
+  }
+
+  @media (max-width: 640px) {
+    .topbarContainer {
+      text-align: center;
+    }
+  
+    .topbarContainer {
+      flex-direction: column;
+    }
+  
+    .topbarLink {
+      flex-direction: column;
+    }
+  
+    .topbarContainer {
+      margin: 0.8em 0;
+    }
   }

@@ -12,9 +12,7 @@ function Politician() {
                     </div>
                     <div className="col-12 ">
                         <div className="card-header">;
-                            <h1 className="candidate">Politician Name
-
-                            </h1>
+                            <h1 className="candidate">Politician Name</h1>
                         </div>
                         <div className="user-body">
                             <p className="edit">Followers: 127 </p>
@@ -59,13 +57,27 @@ function Politician() {
                                             deserunt
                                             maiores blanditiis esse saepe dolores eligendi quo expedita tempora!
                                             Laboriosam!</p>
-                                        <div>
-                                            <button type="button" className="btn btn-outline-dark flex-grow-2" id="post">
-                                                Post</button>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        <div class="callout primary flex-child-auto" id="create-post-card">
+                            <div class="post-form-header">
+                                <h2 class="post-box-title">Make a Post!</h2>
+                            </div>
+                            <form class="make-post-box">
+                                <div class="make-post-title-box">
+                                    <p>
+                                    <input class="form-input" type="text" id="title-box" placeholder="Title of Post"/>
+                                    </p>
+                                </div>
+                                <div class="form-group">
+                                <p><textarea className="post-content-box" placeholder="What would you like to Share?"></textarea></p>
+                                </div>
+                                <div class="form-group">
+                                    <p><input type="submit" class="button expanded" id="create-button" value="Create Post!"></input></p>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
