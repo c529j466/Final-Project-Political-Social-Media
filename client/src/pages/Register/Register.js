@@ -84,7 +84,7 @@ const Register = () => {
   return (
     <>
       {success ? (
-        <section>
+        <section className="register-form">
           <h1>Success!</h1>
           <p>
             <a href="/signin">Sign In</a>
@@ -101,7 +101,7 @@ const Register = () => {
               <FontAwesomeIcon icon={faTimes} className={validName || !user ? "hide" : "invalid"} />
             </label>
             <input
-              type="text"
+              type="username"
               id="username"
               ref={userRef}
               autoComplete="off"
@@ -119,6 +119,63 @@ const Register = () => {
               Must begin with a letter.<br />
               Letters, numbers, underscores, hyphens allowed.
             </p>
+
+            <label htmlFor="City">
+              City:
+              {/* <FontAwesomeIcon icon={faCheck} className={validName ? "valid" : "hide"} />
+              <FontAwesomeIcon icon={faTimes} className={validName || !user ? "hide" : "invalid"} /> */}
+            </label>
+            <input
+              type="text"
+              id="City"
+              ref={userRef}
+              autoComplete="off"
+              onChange={(e) => setUser(e.target.value)}
+              value={user}
+              required
+              aria-invalid={validName ? "false" : "true"}
+              aria-describedby="uidnote"
+              onFocus={() => setUserFocus(true)}
+              onBlur={() => setUserFocus(false)}
+            />
+
+              <label htmlFor="State">
+              State:
+              {/* <FontAwesomeIcon icon={faCheck} className={validName ? "valid" : "hide"} />
+              <FontAwesomeIcon icon={faTimes} className={validName || !user ? "hide" : "invalid"} /> */}
+            </label>
+            <input
+              type="text"
+              id="State"
+              ref={userRef}
+              autoComplete="off"
+              onChange={(e) => setUser(e.target.value)}
+              value={user}
+              required
+              aria-invalid={validName ? "false" : "true"}
+              aria-describedby="uidnote"
+              onFocus={() => setUserFocus(true)}
+              onBlur={() => setUserFocus(false)}
+            />
+
+              <label htmlFor="District">
+              District:
+              {/* <FontAwesomeIcon icon={faCheck} className={validName ? "valid" : "hide"} />
+              <FontAwesomeIcon icon={faTimes} className={validName || !user ? "hide" : "invalid"} /> */}
+            </label>
+            <input
+              type="text"
+              id="District"
+              ref={userRef}
+              autoComplete="off"
+              onChange={(e) => setUser(e.target.value)}
+              value={user}
+              required
+              aria-invalid={validName ? "false" : "true"}
+              aria-describedby="uidnote"
+              onFocus={() => setUserFocus(true)}
+              onBlur={() => setUserFocus(false)}
+            />
 
 
             <label htmlFor="password">

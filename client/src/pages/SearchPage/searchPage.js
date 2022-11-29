@@ -6,7 +6,7 @@ import Card from 'react-bootstrap/Card';
 
 function Search() {
     return (
-        <div className="container">
+        <div className="search-container">
            <Card className='card-body'>
                 <Card.Body>
                     <Card.Title><h3>Search for local politicians by entering a city, state, or district.</h3></Card.Title>
