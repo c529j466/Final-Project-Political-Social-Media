@@ -1,0 +1,6 @@
+body {
+    background: url(../../cool-background.png);
+    margin: 0;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
