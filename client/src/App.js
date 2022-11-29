@@ -8,9 +8,7 @@ import { BrowserRouter as Router, Routes, Route, } from "react-router-dom";
 // import { AuthContext } from "./context/AuthContext";
 import Signin from "./pages/signin/signin";
 import CandidateSignup from "./pages/canidate-signup/candidate-signup"
-import VoterSignup from './pages/voter-signup/voter-signup';
 import PoliProfile from './pages/politicianProfile/politican';
-import UserProfile from './pages/UserProfile/userProfile';
 import Search from './pages/SearchPage/searchPage';
 
 
