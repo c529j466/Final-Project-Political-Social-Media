@@ -36,9 +36,9 @@ export default function VoterSignup () {
       <Button variant="primary" type="submit">
         Sign Up
       </Button>
-      <Link to = "/Signin" className='button'><Button>Signin</Button></Link>
-      <Link to = "/Candidate-Signup" className='button'><Button>Signup as a Candidate</Button></Link>
     </Form>
+    <Link to = "/Signin" className='button'><Button>Signin</Button></Link>
+    <Link to = "/Candidate-Signup" className='button'><Button>Signup as a Candidate</Button></Link>
     </div>
     )
 }
