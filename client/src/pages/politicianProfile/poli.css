@@ -32,6 +32,7 @@ span:hover {
 }
 
 .edit {
-
-    font-size: 17px;
+    margin-top: 12px;
+    display: flex;
+    font-size: 20px;
 }
