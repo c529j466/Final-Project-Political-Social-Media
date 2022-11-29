@@ -5,7 +5,7 @@ function Politician() {
 
     return (
         <div className="container">
-            <div className="row gx-12">
+            <div className=" profile-container row gx-12">
                 <div className="col-md-12 mb-12">
                     <div className="bg-image hover-overlay">
                         <img alt="pic" src="https://mdbcdn.b-cdn.net/img/new/slides/080.webp" className="img-fluid" />
@@ -61,6 +61,7 @@ function Politician() {
                                 </div>
                             </div>
                         </div>
+                        
                         <div class="callout primary flex-child-auto" id="create-post-card">
                             <div class="post-form-header">
                                 <h2 class="post-box-title">Make a Post!</h2>

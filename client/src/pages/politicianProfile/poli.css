@@ -9,6 +9,7 @@ body {
     margin-top: 30px;
 }
 
+
 .post-box-title {
     color: white;
 }
@@ -36,6 +37,7 @@ body {
     align-items: center;
     grid-auto-columns: auto;
     margin-bottom: 100px;
+    margin-top: 75px;
 }
 .feed {
     margin-bottom: 50px;
