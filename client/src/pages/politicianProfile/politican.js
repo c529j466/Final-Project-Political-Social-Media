@@ -28,7 +28,7 @@ function Politician() {
                                     Laboriosam!</p>
                             </div>
                         </div>
-                        <div className=" col-md-12 mb-12">
+                        <div className=" feed col-md-12 mb-12">
                             <div className="card shadow-md">
                                 {/* <div style="height: 26px"></div> */}
                                 <div className="card shadow-md">

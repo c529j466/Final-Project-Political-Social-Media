@@ -1,6 +1,7 @@
 import { useRef, useState, useEffect } from "react";
 import { faCheck, faTimes, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "./signin.css"
 import axios from '../../Api/axios';
 
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
@@ -90,7 +91,7 @@ const Register = () => {
           </p>
         </section>
       ) : (
-        <section>
+        <section className="reg-form">
           <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
           <h1>Register</h1>
           <form onSubmit={handleSubmit}>
@@ -165,14 +166,12 @@ const Register = () => {
               Must match the first password input field.
             </p>
 
-            <button disabled={!validName || !validPwd || !validMatch ? true : false}>Sign Up</button>
+            <button className="signup-btn" disabled={!validName || !validPwd || !validMatch ? true : false}>Sign Up</button>
           </form>
-          <p>
-            Already registered?<br />
-            <span className="line">
-
+          <p> Already registered?<br />
+            <button className="line">
               <a href="/signin">Sign In</a>
-            </span>
+            </button>
           </p>
         </section>
       )}
