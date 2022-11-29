@@ -1,7 +1,8 @@
 
 import React from "react";
 import './search.css'
-import function searchPage() {
+
+function search() {
     return (
         <div className="container">
 
@@ -32,4 +33,4 @@ import function searchPage() {
         </div >
     )
 };
-export default searchPage;
+export default search;
