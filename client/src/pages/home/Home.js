@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import './home.css'
+import { Link } from "react-router-dom";
 
 function Home() {
 
@@ -14,7 +15,7 @@ function Home() {
         </Card.Text>
       </Card.Body>
       <Card.Body>
-        <button>Create an account here or Signin</button>
+      <Link to = "/Signin" className='button'>Create an Account HERE or Signin</Link>
       </Card.Body>
       </Card>
     </div>
