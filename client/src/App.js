@@ -10,7 +10,6 @@ import { BrowserRouter as Router, Routes, Route, } from "react-router-dom";
 import Signin from "./pages/signin/signin";
 import CandidateSignup from "./pages/canidate-signup/candidate-signup"
 import Politician from './pages/politicianProfile/politican';
-// import userProfile from './pages/userProfile/userProfile';
 import Search from './pages/SearchPage/searchPage';
 
 
