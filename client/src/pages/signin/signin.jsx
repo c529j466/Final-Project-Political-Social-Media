@@ -18,20 +18,20 @@ export default function Signin(props) {
           <div className="auth-form-container">    
           <Form className="signin-form" onSubmit={{handleSubmit}}>
             <Form.Group className="mb-3" id="username-input">
-              <Form.Label>Username</Form.Label>
+              <Form.Label className="form-label" >Username</Form.Label>
               <Form.Control value={username} onChange={(e) => setUsername(e.target.value)} type="text" placeholder="username" />
             </Form.Group>
       
             <Form.Group className="mb-3" id="password-input">
-              <Form.Label>Password</Form.Label>
+              <Form.Label className="form-label" >Password</Form.Label>
               <Form.Control value={password} onChange={(e) => setPassword(e.target.value)} type="password" placeholder="password" />
             </Form.Group>
             <Button variant="primary" type="submit">
               Sign In
             </Button>
+            <Link to = "/Candidate-Signup" className='button'><Button>Signup as a Candidate</Button></Link>
+            <Link to = "/Voter-Signup" className='button'><Button>Signup as a Voter</Button></Link>
           </Form>
-          <Link to = "/Candidate-Signup" className='button'>Signup as a Candidate</Link>
-          <Link to = "/Voter-Signup" className='button'>Signup as a Voter</Link>
           </div>
           );
     }

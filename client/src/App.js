@@ -1,8 +1,8 @@
 // import React, { Component, useContext } from 'react';
 // import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './components/navbar/Navbar';
-// import Topbar from './components/navbar/Topbar';
 import Home from "./pages/home/Home";
 // import Profile from "./pages/profile/Profile";
 import { BrowserRouter as Router, Routes, Route, } from "react-router-dom";
