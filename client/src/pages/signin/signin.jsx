@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Link } from 'react-router-dom';
 // import CandidateSignup from '../canidate-signup/candidate-signup';
@@ -26,11 +25,11 @@ export default function Signin(props) {
               <Form.Label className="form-label" >Password</Form.Label>
               <Form.Control value={password} onChange={(e) => setPassword(e.target.value)} type="password" placeholder="password" />
             </Form.Group>
-            <Button variant="primary" type="submit">
+            <button className="button" variant="primary" type="submit">
               Sign In
-            </Button>
+            </button>
           </Form>
-          <Link to = "/Candidate-Signup" className='button'><Button>Create an Account</Button></Link>
+          <Link to = "/Candidate-Signup" ><button className="button">Create an Account</button></Link>
           </div>
           );
     }
