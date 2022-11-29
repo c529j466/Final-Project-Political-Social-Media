@@ -24,9 +24,7 @@ function App() {
             <Route path="/" element={<Home />}></Route>
             <Route path='/signin' element={<Signin />}></Route>
             <Route path='/candidate-signup' element={<CandidateSignup />}></Route>
-            <Route path='/voter-signup' element={<VoterSignup />}></Route>
             <Route path='/search' element={<Search />}></Route>
-            <Route path='/UserProfile/:username' element={<UserProfile />}></Route>
             <Route path='/PoliProfile/:username' element={<PoliProfile />}></Route>
           </Routes>
         </div>
