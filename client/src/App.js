@@ -4,12 +4,11 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './components/navbar/Navbar';
 import Home from "./pages/home/Home";
-// import Profile from "./pages/profile/Profile";
 import { BrowserRouter as Router, Routes, Route, } from "react-router-dom";
 // import { AuthContext } from "./context/AuthContext";
 import Signin from "./pages/signin/signin";
 import CandidateSignup from "./pages/canidate-signup/candidate-signup"
-import Politician from './pages/politicianProfile/politican';
+import PoliProfile from './pages/politicianProfile/politican';
 import Search from './pages/SearchPage/searchPage';
 
 
@@ -23,10 +22,8 @@ function App() {
             <Route path="/" element={<Home />}></Route>
             <Route path='/signin' element={<Signin />}></Route>
             <Route path='/candidate-signup' element={<CandidateSignup />}></Route>
-            <Route path='/politician' element={<Politician />}></Route>
-            {/* <Route path='/user' element={<userProfile />}></Route> */}
             <Route path='/search' element={<Search />}></Route>
-
+            <Route path='/PoliProfile/:username' element={<PoliProfile />}></Route>
           </Routes>
         </div>
       </div>
