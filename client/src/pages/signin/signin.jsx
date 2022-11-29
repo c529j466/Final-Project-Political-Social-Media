@@ -30,8 +30,7 @@ export default function Signin(props) {
               Sign In
             </Button>
           </Form>
-          <Link to = "/Candidate-Signup" className='button'><Button>Signup as a Candidate</Button></Link>
-          <Link to = "/Voter-Signup" className='button'><Button>Signup as a Voter</Button></Link>
+          <Link to = "/Candidate-Signup" className='button'><Button>Create an Account</Button></Link>
           </div>
           );
     }

@@ -56,7 +56,6 @@ export default function CandidateSignup() {
       </Button>
     </Form>
     <Link to = "/Signin" className='button'><Button>Signin</Button></Link>
-    <Link to = "/Voter-Signup" className='button'><Button>Signup as a Voter</Button></Link>
     </div>
     )
 }
