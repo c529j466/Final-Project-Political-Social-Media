@@ -3,4 +3,9 @@ body {
     margin: 0;
 }
 
+.contain {
+    margin-top: 10rem;
+    background-color: navajowhite
+}
+
 @import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");

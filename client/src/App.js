@@ -1,6 +1,7 @@
 // import React, { Component, useContext } from 'react';
 // import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './components/navbar/Navbar';
 // import Topbar from './components/navbar/Topbar';
 import Home from "./pages/home/Home";
@@ -12,7 +13,7 @@ import CandidateSignup from "./pages/canidate-signup/candidate-signup"
 import VoterSignup from './pages/voter-signup/voter-signup';
 import Politician from './pages/politicianProfile/politican';
 // import userProfile from './pages/userProfile/userProfile';
-// import searchPage from './pages/SearchPage/searchPage';
+import Search from './pages/SearchPage/searchPage';
 
 
 function App() {
@@ -28,7 +29,7 @@ function App() {
             <Route path='/voter-signup' element={<VoterSignup />}></Route>
             <Route path='/politician' element={<Politician />}></Route>
             {/* <Route path='/user' element={<userProfile />}></Route> */}
-            {/* <Route path='/search' element={<searchPage />}></Route> */}
+            <Route path='/search' element={<Search />}></Route>
 
           </Routes>
         </div>
