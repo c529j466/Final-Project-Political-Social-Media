@@ -1,7 +1,12 @@
 body {
     background: linear-gradient(90deg, rgba(204, 25, 25, 1) 25%, rgba(255, 255, 255, 1) 50%, rgba(23, 62, 235, 1) 75%);
     /* background: url(../../cool-background.png); */
-    margin: 0;
+    /* margin: 0; */
+}
+
+.img-fluid {
+    padding: 5px;
+    margin-top: 30px;
 }
 
 @import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
@@ -12,6 +17,10 @@ body {
     justify-content: center;
     align-items: center;
     grid-auto-columns: auto;
+    margin-bottom: 100px;
+}
+.feed {
+    margin-bottom: 50px;
 }
 
 .candidate {

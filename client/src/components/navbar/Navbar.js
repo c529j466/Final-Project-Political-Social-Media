@@ -8,7 +8,7 @@ function Navbar() {
     <div className="topbarContainer">
       <div className="topbarLeft">
         <Link to="/" style={{ textDecoration: "none" }}>
-          <span className="logo">PoliticalConnect</span>
+          <span className="logo">Political Connect</span>
         </Link>
       </div>
       <div className="topbarRight">

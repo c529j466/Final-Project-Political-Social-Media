@@ -67,7 +67,7 @@ const Login = () => {
           </p>
         </section>
       ) : (
-        <section>
+        <section className='reg-form'>
           <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
           <h1>Sign In</h1>
           <form onSubmit={handleSubmit}>
@@ -94,10 +94,10 @@ const Login = () => {
           </form>
           <p>
             Need an Account?<br />
-            <span className="line">
+            <button className="line">
 
               <a href="/Register">Sign Up</a>
-            </span>
+            </button>
           </p>
         </section>
       )}
