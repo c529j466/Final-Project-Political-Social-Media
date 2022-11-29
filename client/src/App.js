@@ -12,7 +12,7 @@ import CandidateSignup from "./pages/canidate-signup/candidate-signup"
 import VoterSignup from './pages/voter-signup/voter-signup';
 import Politician from './pages/politicianProfile/politican';
 // import userProfile from './pages/userProfile/userProfile';
-// import searchPage from './pages/SearchPage/searchPage';
+import Search from './pages/SearchPage/searchPage';
 
 
 function App() {
@@ -28,7 +28,7 @@ function App() {
             <Route path='/voter-signup' element={<VoterSignup />}></Route>
             <Route path='/politician' element={<Politician />}></Route>
             {/* <Route path='/user' element={<userProfile />}></Route> */}
-            {/* <Route path='/search' element={<searchPage />}></Route> */}
+            <Route path='/search' element={<Search />}></Route>
 
           </Routes>
         </div>
