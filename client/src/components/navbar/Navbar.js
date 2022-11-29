@@ -15,7 +15,7 @@ function Navbar() {
         <div className="topbarLinks">
           <Link to="/" className="topbarLink"><button className="nav-link" >Home</button></Link>
           <Link to="/Search" className="topbarLink"><button className="nav-link" >Search</button></Link>
-          <Link to="/poliProfile" className="topbarLink"><button className="nav-link" >Profile</button></Link>
+          <Link to="/politician" className="topbarLink"><button className="nav-link" >Profile</button></Link>
         </div>
         <div className="topbarLeft">
           <Link to="/Signin" className="topbarLink"><button className="nav-link">Signin</button></Link>

@@ -2,15 +2,19 @@
 // import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+// import ReactDOM from 'react-dom'
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+// import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 import Navbar from './components/navbar/Navbar';
 import Home from "./pages/home/Home";
 import { BrowserRouter as Router, Routes, Route, } from "react-router-dom";
 // import { AuthContext } from "./context/AuthContext";
-import Signin from "./pages/signin/signin";
-import CandidateSignup from "./pages/canidate-signup/candidate-signup"
-import PoliProfile from './pages/politicianProfile/politican';
+import Signin from './pages/Login/login';
+import Register from './pages/Register/Register'
+import Politician from './pages/politicianProfile/politican';
 import Search from './pages/SearchPage/searchPage';
 
+// ReactDOM.render(document.body)
 
 function App() {
   return (
@@ -21,9 +25,10 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />}></Route>
             <Route path='/signin' element={<Signin />}></Route>
-            <Route path='/candidate-signup' element={<CandidateSignup />}></Route>
+            <Route path='/Register' element={<Register />}></Route>
             <Route path='/search' element={<Search />}></Route>
-            <Route path='/PoliProfile/:username' element={<PoliProfile />}></Route>
+            <Route path='/Politician' element={<Politician />}></Route>
+            {/* :username */}
           </Routes>
         </div>
       </div>

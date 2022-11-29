@@ -3,7 +3,7 @@
 }
 
 :root {
-  background: linear-gradient(90deg, rgba(204,25,25,1) 25%, rgba(255,255,255,1) 50%, rgba(23,62,235,1) 75%);
+  background: linear-gradient(90deg, rgba(204, 25, 25, 1) 25%, rgba(255, 255, 255, 1) 50%, rgba(23, 62, 235, 1) 75%);
   /* background-image: url(./cool-background.png); */
 }
 
@@ -16,7 +16,10 @@
   margin-right: 500px;
   padding: 20px;
 }
-.signin-form, .candidate-form, .voter-form {
+
+.signin-form,
+.candidate-form,
+.voter-form {
   margin: 20px;
 }
 
@@ -44,6 +47,94 @@
   pointer-events: none;
 }
 
+section {
+  width: 100%;
+  max-width: 420px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex-grow: 1;
+  padding-bottom: 1rem;
+}
+
+a,
+a:visited {
+  color: #fff;
+}
+
+input[type="text"],
+input[type="password"],
+button,
+textarea {
+  font-family: 'Nunito', sans-serif;
+  font-size: 22px;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+}
+
+label,
+button {
+  margin-top: 1rem;
+}
+
+button {
+  padding: 0.5rem;
+}
+
+.instructions {
+  font-size: 0.75rem;
+  border-radius: 0.5rem;
+  background: #000;
+  color: #fff;
+  padding: 0.25rem;
+  position: relative;
+  bottom: -10px;
+}
+
+.instructions>svg {
+  margin-right: 0.25rem;
+}
+
+.offscreen {
+  position: absolute;
+  left: -9999px;
+}
+
+.hide {
+  display: none;
+}
+
+.valid {
+  color: limegreen;
+  margin-left: 0.25rem;
+}
+
+.invalid {
+  color: red;
+  margin-left: 0.25rem;
+}
+
+.errmsg {
+  background-color: lightpink;
+  color: firebrick;
+  font-weight: bold;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.line {
+  display: inline-block;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -51,7 +142,7 @@
 }
 
 .App-header {
-  /* background-color: #282c34; */
+
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -59,10 +150,6 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 @keyframes App-logo-spin {
