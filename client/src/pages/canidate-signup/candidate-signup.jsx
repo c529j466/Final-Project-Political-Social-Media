@@ -52,7 +52,7 @@ export default function CandidateSignup() {
       </Form.Group>
 
       <Button variant="primary" type="submit">
-        Sign Up
+        Submit
       </Button>
     </Form>
     <Link to = "/Signin" className='button'><Button>Signin</Button></Link>

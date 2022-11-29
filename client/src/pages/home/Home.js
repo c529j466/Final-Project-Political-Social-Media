@@ -7,7 +7,7 @@ function Home() {
 
   return (
     <div className='home-card'>
-      <Card className='card-body'style={{ width: '15rem' }}>
+      <Card className='card-body'>
       <Card.Body>
         <Card.Title>Welcome!</Card.Title>
         <Card.Text>
