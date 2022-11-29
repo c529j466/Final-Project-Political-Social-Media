@@ -1,7 +1,7 @@
 import React from "react";
 import './user.css';
 
-function Userprofile() {
+function UserProfile() {
     return (
 
         <div className="container">
@@ -64,4 +64,4 @@ function Userprofile() {
     )
 }
 
-export default Userprofile;
+export default UserProfile;
