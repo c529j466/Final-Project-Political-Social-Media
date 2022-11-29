@@ -20,25 +20,25 @@ export default function VoterSignup () {
     <div className="auth-form-container">
     <Form className="voter-form" onSubmit={handleSubmit}>
       <Form.Group className="mb-3" id="username-input">
-        <Form.Label>Username</Form.Label>
+        <Form.Label className="form-label">Username</Form.Label>
         <Form.Control value={username} onChange={(e) => setUsername(e.target.value)} type="text" placeholder="username" />
       </Form.Group>
 
       <Form.Group className="mb-3" id="email-input">
-        <Form.Label>Email</Form.Label>
+        <Form.Label className="form-label" >Email</Form.Label>
         <Form.Control value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="email@example.com" />
       </Form.Group>
 
       <Form.Group className="mb-3" id="password-input">
-        <Form.Label>Password</Form.Label>
+        <Form.Label className="form-label" >Password</Form.Label>
         <Form.Control value={password} onChange={(e) => setPassword(e.target.value)} type="password" placeholder="password" />
       </Form.Group>
       <Button variant="primary" type="submit">
         Sign Up
       </Button>
+      <Link to = "/Signin" className='button'><Button>Signin</Button></Link>
+      <Link to = "/Candidate-Signup" className='button'><Button>Signup as a Candidate</Button></Link>
     </Form>
-    <Link to = "/Signin" className='button'>Signin</Link>
-    <Link to = "/Candidate-Signup" className='button'>Signup as a Candidate</Link>
     </div>
     )
 }

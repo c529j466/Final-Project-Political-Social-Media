@@ -15,7 +15,7 @@ function Home() {
         </Card.Text>
       </Card.Body>
       <Card.Body>
-      <Link to = "/Signin" className='button'>Create an Account HERE or Signin</Link>
+      <Link to = "/Signin" className='card-button'><button>Create an Account HERE or Signin</button></Link>
       </Card.Body>
       </Card>
     </div>
