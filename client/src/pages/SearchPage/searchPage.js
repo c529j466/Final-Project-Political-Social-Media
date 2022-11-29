@@ -10,9 +10,9 @@ function Search() {
 
         <div className="contain">
             <h1>SEARCH FOR LOCAL POLITICANS NEAR YOU</h1>
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="SEARCH BY CITY STATE OR DISTRICT" aria-label="Search"></input>
-                <button class="btn btn-outline-dark" type="submit">Search</button>
+            <form role="search">
+                <input className="form-control me-2" type="search" placeholder="SEARCH BY CITY STATE OR DISTRICT" aria-label="Search"></input>
+                <button className="btn btn-outline-dark" type="submit">Search</button>
             </form>
         </div>
     )
