@@ -23,7 +23,8 @@ const voterSchema = new Schema(
      },
      following: [
         {
-            type: Schema.Types.ObjectId,
+            type: Array,
+            default: []
         }
      ],
      followingCount: Number,

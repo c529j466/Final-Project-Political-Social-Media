@@ -1,10 +1,11 @@
 const User = require("../models/Voter");
 const router = require("express").Router();
 const bcrypt = require("bcrypt");
+const Voter = require("../models/Voter");
 
 //update Voter
 router.put("/:id", async (req, res) => {
-  if (req.body.userId === req.params.id || req.body.isAdmin) {
+  if (req.body.voterId === req.params.id) {
     if (req.body.password) {
       try {
         const salt = await bcrypt.genSalt(10);
@@ -14,7 +15,7 @@ router.put("/:id", async (req, res) => {
       }
     }
     try {
-      const user = await User.findByIdAndUpdate(req.params.id, {
+      const user = await Voter.findByIdAndUpdate(req.params.id, {
         $set: req.body,
       });
       res.status(200).json("Account has been updated");
@@ -28,9 +29,9 @@ router.put("/:id", async (req, res) => {
 
 //delete Voter
 router.delete("/:id", async (req, res) => {
-  if (req.body.userId === req.params.id || req.body.isAdmin) {
+  if (req.body.voterId === req.params.id) {
     try {
-      await User.findByIdAndDelete(req.params.id);
+      await Voter.findByIdAndDelete(req.params.id);
       res.status(200).json("Account has been deleted");
     } catch (err) {
       return res.status(500).json(err);
@@ -42,12 +43,12 @@ router.delete("/:id", async (req, res) => {
 
 //get a Voter
 router.get("/:id", async (req, res) => {
-  const userId = req.query.userId;
+  const voterId = req.query.voterId;
   const username = req.query.username;
   try {
-    const user = userId
-      ? await User.findById(userId)
-      : await User.findOne({ username: username });
+    const user = voterId
+      ? await Voter.findById(voterId)
+      : await Voter.findOne({ username: username });
     const { password, updatedAt, ...other } = user._doc;
     res.status(200).json(other);
   } catch (err) {
@@ -55,15 +56,15 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-//follow a user
+//follow a Politician
 
 router.put("/:id/follow", async (req, res) => {
-  if (req.body.userId !== req.params.id) {
+  if (req.body.voterId !== req.params.id) {
     try {
-      const user = await User.findById(req.params.id);
-      const currentUser = await User.findById(req.body.userId);
-      if (!user.followers.includes(req.body.userId)) {
-        await user.updateOne({ $push: { followers: req.body.userId } });
+      const user = await Politician.findById(req.params.id);
+      const currentUser = await Voter.findById(req.body.voterId);
+      if (!user.followers.includes(req.body.voterId)) {
+        await user.updateOne({ $push: { followers: req.body.voterId } });
         await currentUser.updateOne({ $push: { followings: req.params.id } });
         res.status(200).json("user has been followed");
       } else {
@@ -77,15 +78,15 @@ router.put("/:id/follow", async (req, res) => {
   }
 });
 
-//unfollow a user
+//unfollow a Politician
 
 router.put("/:id/unfollow", async (req, res) => {
-  if (req.body.userId !== req.params.id) {
+  if (req.body.voterId !== req.params.id) {
     try {
-      const user = await User.findById(req.params.id);
-      const currentUser = await User.findById(req.body.userId);
-      if (user.followers.includes(req.body.userId)) {
-        await user.updateOne({ $pull: { followers: req.body.userId } });
+      const user = await Politician.findById(req.params.id);
+      const currentUser = await Voter.findById(req.body.voterId);
+      if (user.followers.includes(req.body.voterId)) {
+        await user.updateOne({ $pull: { followers: req.body.voterId } });
         await currentUser.updateOne({ $pull: { followings: req.params.id } });
         res.status(200).json("user has been unfollowed");
       } else {
