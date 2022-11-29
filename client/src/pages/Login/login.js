@@ -11,7 +11,7 @@ const Login = () => {
   const errRef = useRef();
 
   const [user, setUser] = useState('');
-  const [pwd, setPwd] = useState('');
+  const [jwt, setjwt] = useState('');
   const [errMsg, setErrMsg] = useState('');
   const [success, setSuccess] = useState(false);
 
@@ -21,14 +21,14 @@ const Login = () => {
   }, [])
   useEffect(() => {
     setErrMsg('');
-  }, [user, pwd])
+  }, [user, jwt])
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
       const response = await axios.post(LOGIN_URL,
-        JSON.stringify({ user, pwd }),
+        JSON.stringify({ user, jwt }),
         {
           headers: { 'Content-Type': 'application/json' },
           withCredentials: true
@@ -38,9 +38,9 @@ const Login = () => {
       //console.log(JSON.stringify(response));
       const accessToken = response?.data?.accessToken;
       const roles = response?.data?.roles;
-      setAuth({ user, pwd, roles, accessToken });
+      setAuth({ user, jwt, roles, accessToken });
       setUser('');
-      setPwd('');
+      setjwt('');
       setSuccess(true);
     } catch (err) {
       if (!err?.response) {
@@ -86,8 +86,8 @@ const Login = () => {
             <input
               type="password"
               id="password"
-              onChange={(e) => setPwd(e.target.value)}
-              value={pwd}
+              onChange={(e) => setjwt(e.target.value)}
+              value={jwt}
             // required
             />
             <button>Sign In</button>
