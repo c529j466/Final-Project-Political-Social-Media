@@ -13,7 +13,7 @@ function Navbar() {
       </div>
       <div className="topbarRight">
         <div className="topbarLinks">
-          <span className="topbarLink">Home</span>
+          <Link to="/" className="topbarLink"><button>Home</button></Link>
           <span className="topbarLink">Search</span>
           <span className="topbarLink">Profile</span>
         </div>
