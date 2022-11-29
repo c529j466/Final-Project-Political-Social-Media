@@ -170,7 +170,7 @@ const Register = () => {
           <p>
             Already registered?<br />
             <span className="line">
-              {/*put router link here*/}
+
               <a href="/signin">Sign In</a>
             </span>
           </p>

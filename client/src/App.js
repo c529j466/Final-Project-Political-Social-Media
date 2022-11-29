@@ -14,6 +14,7 @@ import Register from './pages/Register/Register'
 import Politician from './pages/politicianProfile/politican';
 import Search from './pages/SearchPage/searchPage';
 
+
 // ReactDOM.render(document.body)
 
 function App() {

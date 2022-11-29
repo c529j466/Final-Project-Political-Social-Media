@@ -2,9 +2,10 @@ import { useRef, useState, useEffect, useContext } from 'react';
 import AuthContext from "../../context/AuthProvider";
 
 import axios from '../../Api/axios';
-const LOGIN_URL = '/auth';
+const LOGIN_URL = '../../context/AuthProvider';
 
 const Login = () => {
+
   const { setAuth } = useContext(AuthContext);
   const userRef = useRef();
   const errRef = useRef();
@@ -13,6 +14,7 @@ const Login = () => {
   const [pwd, setPwd] = useState('');
   const [errMsg, setErrMsg] = useState('');
   const [success, setSuccess] = useState(false);
+
 
   useEffect(() => {
     userRef.current.focus();
@@ -77,7 +79,7 @@ const Login = () => {
               autoComplete="off"
               onChange={(e) => setUser(e.target.value)}
               value={user}
-              required
+            // required
             />
 
             <label htmlFor="password">Password:</label>
@@ -86,14 +88,14 @@ const Login = () => {
               id="password"
               onChange={(e) => setPwd(e.target.value)}
               value={pwd}
-              required
+            // required
             />
             <button>Sign In</button>
           </form>
           <p>
             Need an Account?<br />
             <span className="line">
-              {/*put router link here*/}
+
               <a href="/Register">Sign Up</a>
             </span>
           </p>
