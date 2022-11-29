@@ -1,84 +1,36 @@
 body {
     background: url(../../cool-background.png);
+    margin: 0;
 }
 
 @import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
 
-/* body {
-    margin: 0;
-    font-family: 'Lato', sans-serif;
+.container {
+    background-color: #222;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-auto-columns: auto;
 }
 
-.header {
-    min-height: 60vh;
-    background: #222;
+.candidate {
+    color: whitesmoke;
+
+}
+
+.user-body {
     color: white;
-    clip-path: ellipse(100vw 60vh at 50% 50%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
-.details {
-    text-align: center;
+span {
+    color: lightblue;
 }
 
-.profile-pic {
-    height: 6rem;
-    width: 6rem;
-    object-fit: center;
-    border-radius: 50%;
-    border: 2px solid #fff;
+span:hover {
+    color: red;
 }
 
-.location p {
-    display: inline-block;
-}
+.edit {
 
-.location svg {
-    vertical-align: middle;
-}
-
-.stats {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.stats .col-4 {
-    width: 10rem;
-    text-align: center;
-}
-
-.heading {
-    font-weight: 400;
-    font-size: 1.3rem;
-    margin: 1rem 0;
-} */
-
-.student-profile .card .card-header .profile_img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    margin: 10px auto;
-    border: 10px solid #ccc;
-    border-radius: 50%;
-}
-
-
-.student-profile .card h3 {
-    font-size: 20px;
-    font-weight: 700;
-}
-
-.student-profile .card p {
-    font-size: 16px;
-    color: #000;
-}
-
-.student-profile .table th,
-.student-profile .table td {
-    font-size: 14px;
-    padding: 5px 10px;
-    color: #000;
+    font-size: 17px;
 }
