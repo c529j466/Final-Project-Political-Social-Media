@@ -29,9 +29,9 @@ export default function Signin(props) {
             <Button variant="primary" type="submit">
               Sign In
             </Button>
-            <Link to = "/Candidate-Signup" className='button'><Button>Signup as a Candidate</Button></Link>
-            <Link to = "/Voter-Signup" className='button'><Button>Signup as a Voter</Button></Link>
           </Form>
+          <Link to = "/Candidate-Signup" className='button'><Button>Signup as a Candidate</Button></Link>
+          <Link to = "/Voter-Signup" className='button'><Button>Signup as a Voter</Button></Link>
           </div>
           );
     }

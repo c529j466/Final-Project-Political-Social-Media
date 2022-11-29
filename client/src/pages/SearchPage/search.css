@@ -1,5 +1,6 @@
 body {
-    background: url(../../cool-background.png);
+    background: linear-gradient(90deg, rgba(204,25,25,1) 25%, rgba(255,255,255,1) 50%, rgba(23,62,235,1) 75%);
+    /* background: url(../../cool-background.png); */
     margin: 0;
 }
 
