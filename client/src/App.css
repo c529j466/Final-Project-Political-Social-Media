@@ -14,9 +14,28 @@
   margin-top: 120px;
   margin-left: 500px;
   margin-right: 500px;
+  padding: 20px;
 }
 .signin-form, .candidate-form, .voter-form {
   margin: 20px;
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+.button {
+  background-color: white;
+  font-weight: bold;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.nav-link {
+  background-color: white;
+  font-weight: bold;
+  padding: 5px;
+  border-radius: 5px;
 }
 
 

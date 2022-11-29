@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import Button from 'react-bootstrap/Button';
+
 import Form from 'react-bootstrap/Form';
 import { Link } from "react-router-dom";
 // import Signin from '../signin/signin';
@@ -20,6 +20,7 @@ export default function CandidateSignup() {
 
     return (
     <div className="auth-form-container">
+    <h3>Create Account</h3>
     <Form className='candidate-form' onSubmit={handleSubmit}>
       <Form.Group className="mb-3" id="username-input">
         <Form.Label className="form-label" >Username</Form.Label>
@@ -51,11 +52,11 @@ export default function CandidateSignup() {
         <Form.Control value={district} onChange={(e) => setDistrict(e.target.value)} type="text" placeholder="district" />
       </Form.Group>
 
-      <Button variant="primary" type="submit">
-        Submit
-      </Button>
+      <button className="button" variant="primary" type="submit">
+        Create Account
+      </button>
     </Form>
-    <Link to = "/Signin" className='button'><Button>Signin</Button></Link>
+    <Link to = "/Signin"><button className="button">Signin</button></Link>
     </div>
     )
 }

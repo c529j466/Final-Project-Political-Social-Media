@@ -11,12 +11,11 @@ function Home() {
       <Card.Body>
         <Card.Title>Welcome!</Card.Title>
         <Card.Text>
-          Here at 
           Political connect is a website used to help people connect better with their local polotics and poloticians. 
         </Card.Text>
       </Card.Body>
       <Card.Body>
-      <Link to = "/Signin" className='card-button'><button>Create an Account HERE</button></Link>
+      <Link to = "/Candidate-Signup" className='card-button'><button>Create an Account HERE</button></Link>
       </Card.Body>
       </Card>
     </div>
