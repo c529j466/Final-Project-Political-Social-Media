@@ -13,12 +13,12 @@ function Navbar() {
       </div>
       <div className="topbarRight">
         <div className="topbarLinks">
-          <Link to="/" className="topbarLink"><button>Home</button></Link>
-          <span className="topbarLink">Search</span>
-          <span className="topbarLink">Profile</span>
+          <Link to="/" className="topbarLink"><button className="nav-link" >Home</button></Link>
+          <Link to="/Search" className="topbarLink"><button className="nav-link" >Search</button></Link>
+          <Link to="/poliProfile" className="topbarLink"><button className="nav-link" >Profile</button></Link>
         </div>
         <div className="topbarLeft">
-          <span className="topbarLink">Login/Signup</span>
+          <Link to="/Signin" className="topbarLink"><button className="nav-link">Signin</button></Link>
         </div>
         <div className="topbarIcons">
           <div className="topbarIconItem">
