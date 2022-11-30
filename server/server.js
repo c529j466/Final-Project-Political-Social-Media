@@ -1,9 +1,10 @@
 require('dotenv').config()
 const { MongoClient } = require('mongodb')
+var mongoose = require('mongoose');
 const path = require('path');
 const express = require("express");
 const db = require('./config/connection');
-
+const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 3001;
 
 const app = express();
@@ -11,9 +12,16 @@ const cors = require('cors');
 const { start } = require('repl');
 app.use(cors());
 
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
 
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+var nameSchema = new mongoose.Schema({
+  userName: String,
+  password: String
+});
+var User = mongoose.model("User", nameSchema);
 async function Go() {
 
   const client = new MongoClient(' mongodb+srv://c529j466:$cJ0nes$@cluster0.s1rnsdv.mongodb.net/FinalProjectDB?retryWrites=true&w=majority')
@@ -31,8 +39,16 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
 
-app.get('/express_backend', (req, res) => { //Line 9
-  res.send({ express: 'YOUR EXPRESS BACKEND IS CONNECTED TO REACT' }); //Line 10
+app.post('/register', (req, res) => { //Line 9
+  console.log('we hit register');
+  var newUser = new User(req.body);
+  newUser.save()
+    .then(item => {
+      res.send('Registration successful')
+    })
+    .catch(err => {
+      res.status(400).send("Unable to save to database");
+    });
 });
 
 
