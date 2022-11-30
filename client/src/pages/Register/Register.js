@@ -2,7 +2,7 @@ import { useRef, useState, useEffect } from "react";
 import { faCheck, faTimes, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./signin.css"
-import axios from '../../Api/axios';
+import axios from 'axios';
 
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
@@ -54,11 +54,11 @@ const Register = () => {
       return;
     }
     try {
-      const response = await axios.post(REGISTER_URL,
+      const response = await axios.post('http://localhost:3001' + REGISTER_URL,
         JSON.stringify({ user, pwd }),
         {
           headers: { 'Content-Type': 'application/json' },
-          withCredentials: true
+          withCredentials: false
         }
       );
       // TODO: remove console.logs before deployment
@@ -139,7 +139,7 @@ const Register = () => {
               onBlur={() => setUserFocus(false)}
             />
 
-              <label htmlFor="State">
+            <label htmlFor="State">
               State:
               {/* <FontAwesomeIcon icon={faCheck} className={validName ? "valid" : "hide"} />
               <FontAwesomeIcon icon={faTimes} className={validName || !user ? "hide" : "invalid"} /> */}
@@ -158,7 +158,7 @@ const Register = () => {
               onBlur={() => setUserFocus(false)}
             />
 
-              <label htmlFor="District">
+            <label htmlFor="District">
               District:
               {/* <FontAwesomeIcon icon={faCheck} className={validName ? "valid" : "hide"} />
               <FontAwesomeIcon icon={faTimes} className={validName || !user ? "hide" : "invalid"} /> */}
